@@ -3,7 +3,7 @@ import { LoginPage } from '../pom-pages/LoginPage';
 import { CartPage } from '../pom-pages/CartPage';
 import { CheckoutPage } from '../pom-pages/CheckoutPage';
 
-test('happy path POM (expects in test)', async ({ page }) => {
+test('Full purchase flow on SauceDemo using POM pattern', async ({ page }) => {
   const login = new LoginPage(page);
   const cart = new CartPage(page);
   const checkout = new CheckoutPage(page);

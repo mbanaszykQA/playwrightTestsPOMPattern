@@ -3,7 +3,7 @@ import { LoginPage } from '../pom-pages/LoginPage';
 
 test.describe('Login tests', () => {
 
-  test('Prawidłowe logowanie - standard_user', async ({ page }) => {
+  test('Successful login - standard_user', async ({ page }) => {
     const login = new LoginPage(page);
 
     await login.open();
@@ -12,7 +12,7 @@ test.describe('Login tests', () => {
     await expect(login.inventoryHeader()).toHaveText('Products');
   });
 
-  test('Nieprawidłowe logowanie - locked_out_user', async ({ page }) => {
+  test('Unsuccessful login - locked_out_user', async ({ page }) => {
     const login = new LoginPage(page);
 
     await login.open();

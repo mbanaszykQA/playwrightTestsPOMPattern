@@ -4,7 +4,7 @@ import { InventoryPage } from '../pom-pages/InventoryPage';
 import { CartPage } from '../pom-pages/CartPage';
 import { CheckoutPage } from '../pom-pages/CheckoutPage';
 
-test('Full purchase flow on SauceDemo using Builder pattern', async ({ page }) => {
+test('Full purchase flow on SauceDemo using POM pattern', async ({ page }) => {
   const login = new LoginPage(page);
   const inventory = new InventoryPage(page);
   const cart = new CartPage(page);

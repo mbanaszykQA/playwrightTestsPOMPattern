@@ -22,13 +22,13 @@ Testy UI oparte są na aplikacji **SauceDemo**, natomiast testy API wykorzystuj�
 ## 📂 Struktura projektu
 
 ```
-playwrightTestsPOMPattern/
+playwrightTestsPOMPattern/project
 ├── pom-pages/            # Page Objecty (logika stron)
 ├── tests/                # Konkretne scenariusze testowe
 ├── playwright.config.ts  # Konfiguracja Playwright
+├─ node_modules/
 ├── package.json
 ├── tsconfig.json
-└── README.md
 ```
 
 ---

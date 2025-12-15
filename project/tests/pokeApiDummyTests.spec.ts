@@ -4,7 +4,7 @@ const BASE_URL = 'https://pokeapi.co/api/v2';
 
 test.describe('PokeAPI tests (GET / POST / DELETE)', () => {
 
-  test('GET /pokemon/ditto - weryfikacja poprawnych danych', async () => {
+  test('GET /pokemon/ditto - verify correct data', async () => {
     const response = await request.get(`${BASE_URL}/pokemon/ditto`);
     expect(response.status()).toBe(200);
 
@@ -14,7 +14,7 @@ test.describe('PokeAPI tests (GET / POST / DELETE)', () => {
     expect(body.types).toBeDefined();
   });
 
-  test('POST /pokemon - powinno zwrócić błąd (method not allowed)', async () => {
+  test('POST /pokemon - return error (method not allowed)', async () => {
     const response = await request.post(`${BASE_URL}/pokemon`, {
       data: {
         name: 'test-pokemon'
@@ -25,7 +25,7 @@ test.describe('PokeAPI tests (GET / POST / DELETE)', () => {
     expect([404, 405]).toContain(response.status());
   });
 
-  test('DELETE /pokemon/1 - powinno zwrócić błąd (method not allowed)', async () => {
+  test('DELETE /pokemon/1 - return error (method not allowed)', async () => {
     const response = await request.delete(`${BASE_URL}/pokemon/1`);
     expect([404, 405]).toContain(response.status());
   });
